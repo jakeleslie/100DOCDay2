@@ -30,14 +30,31 @@
 # BMI CALCULATOR
 # bmi is weight / height
 # 99 killos 1.74 meters
-kilos = input("Enter your weight in KG\n")
-height = input("Enter your height in meters\n")
+#kilos = input("Enter your weight in KG\n")
+#height = input("Enter your height in meters\n")
 
 # Weight in kilos / height squared. Needed to make it its own variable and equation, I was trying to do it in one line which didn't work.
 # Keep KG as an int
-bmi = int(kilos) / float(height) ** 2
+#bmi = int(kilos) / float(height) ** 2
 # Want to make it an int so it will round up or down, which makes it work better.
-bmi_as_int = int(bmi)
+#bmi_as_int = int(bmi)
 
-print(f"Your BMI is: {bmi_as_int}")
+#print(f"Your BMI is: {bmi_as_int}")
+
+
+# Tip calculator project
+
+print("Welcome to the tip calculator.\n")
+total = input("What was the total bill? ")
+tipPercent = input("What percentage tip would you like to give? 10, 12, or 15? ")
+amountofpeople = input("How many people want to split the bill? ")
+
+tip_amount = (float(total) * (int(tipPercent) / 100))
+
+bill_per_person = ((float(total) + tip_amount) / int(amountofpeople))
+
+# Round operator rounds it to two decimal spaces.
+final_amt = round(bill_per_person, 2)
+
+print(f"Each person should pay: ${final_amt}")
 
